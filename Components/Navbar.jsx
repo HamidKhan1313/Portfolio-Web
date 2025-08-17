@@ -21,8 +21,8 @@ function Navbar() {
             <Image src={assets.header_bg_color} alt='' className='w-full' />
         </div>
             <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50'>
-                <a href="#top">
-                    <Image src={assets.logo} alt='Lodo' className='w-28  cursor-pointer mr-14' priority />
+                 <a href="#top">
+                   
                 </a>
                 <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white
                 shadow-sm bg-opacity-50'>
