@@ -4,11 +4,11 @@ import React from 'react'
 
 function About() {
   return (
-    <div id='About' className='w-full px-[12%] py-10 scroll-mt-40 mb-18 '>
-      <h4 className='text-center  text-lg font-Ovo mt-48  ml-20' >
+    <div id='About' className='w-full px-[12%] py-10 scroll-mt-75 mb-18 '>
+      <h4 className='text-center  text-lg font-Ovo mt-30  ml-20' >
         Introduction
       </h4>
-      <h2 className='text-center text-5xl font-Ovo mt-11 ml-20'>
+      <h2 className='text-center text-5xl font-Ovo mt-5 ml-20'>
         About me
       </h2>
       <div className='flex w-full flex-col lg:flex-row items-center gap-20 my-20 '>
@@ -16,7 +16,7 @@ function About() {
             <Image src={assets.user_image}  alt='user'  className='w-full rounded-3xl '/>
         </div>
         <div className='flex-1 '>
-     <p className='mb-4 max-w-2xl font-Ovo  '>
+     <p className=' max-w-2xl font-Ovo mb-5  '>
         I am experienced Frontend Developer with over a
          decade of professional expertise in the field.Throughout 
          my carrer, I have had the privilege of collaborating with
