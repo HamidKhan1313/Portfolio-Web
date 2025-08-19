@@ -1,8 +1,11 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 function Navbar() {
+
+
+    const [isScroll, setIsScroll] = useState(false)
 
 
     const sideMenuRef = useRef()
@@ -10,23 +13,34 @@ function Navbar() {
     const openMenu = () => {
         sideMenuRef.current.style.transform = 'translateX(-16rem)'
     }
-     const closeMenu = () => {
+    const closeMenu = () => {
         sideMenuRef.current.style.transform = 'translateX(16rem)'
     }
 
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (scrollY > 50) {
+                setIsScroll(true)
+            } else {
+                setIsScroll(false)
+            }
+        })
+    },[])
 
     return (
         <>
-        <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]'>
-            <Image src={assets.header_bg_color} alt='' className='w-full' />
-        </div>
-            <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50'>
-                 <a href="#top">
-                   
+            <div className='fixed top-0  right-0 w-11/12 -z-6 translate-y-[-70%]'>
+                <Image src={assets.header_bg_color} alt='' className='w-full' />
+            </div>
+            <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex  items-center
+             justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur shadow-sm" : ""}`}>
+
+                <a href="#top">
+
                 </a>
-                <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white
-                shadow-sm bg-opacity-50'>
-                    <li><a className='font-Ovo' href="#top">Home</a></li>
+                <ul className={`hidden md:flex  items-center gap-6 lg:gap-8 rounded-full
+                     px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"} `}>
+                    <li><a className='font-Ovo ' href="#top">Home</a></li>
                     <li><a className='font-Ovo' href="#about">About Me</a></li>
                     <li><a className='font-Ovo' href="#services">Services</a></li>
                     <li><a className='font-Ovo' href="#work">My Work</a></li>
@@ -34,16 +48,16 @@ function Navbar() {
                 </ul>
                 <div className='flex items-center gap-4'>
 
-                  <button>
-                    <Image  src={assets.moon_icon} alt='' className='w-6'/>
-                  </button>
+                    <button>
+                        <Image src={assets.moon_icon} alt='' className='w-6' />
+                    </button>
 
                     <a href="#contact" className='hidden lg:flex items-center gap-3 PX-10  PY-2.5
-                    border border-gray-500 rounded-full ml-4 font-Ovo '>Contact <Image src={assets.arrow_icon} 
-                    alt='arrow-icon' className='w-3' priority/></a>
+                    border border-gray-500 rounded-full ml-4 font-Ovo '>Contact <Image src={assets.arrow_icon}
+                            alt='arrow-icon' className='w-3' priority /></a>
 
                     <button className='block md:hidden ml-3' onClick={openMenu}>
-                        <Image src={assets.menu_black} alt='' className='w-6'/>
+                        <Image src={assets.menu_black} alt='' className='w-6' />
                     </button>
                 </div>
                 {/*--------mobile menu---------*/}
@@ -51,13 +65,13 @@ function Navbar() {
                 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500'>
 
                     <div className='absolute right-6 top-6' onClick={closeMenu}>
-                        <Image src={assets.close_black} alt='' className='w-5 cursor-pointer'/>
+                        <Image src={assets.close_black} alt='' className='w-5 cursor-pointer' />
                     </div>
-                    <li><a className='font-Ovo'onClick={closeMenu} href="#top">Home</a></li>
-                    <li><a className='font-Ovo'onClick={closeMenu} href="#about">About Me</a></li>
-                    <li><a className='font-Ovo'onClick={closeMenu} href="#services">Services</a></li>
-                    <li><a className='font-Ovo'onClick={closeMenu} href="#work">My Work</a></li>
-                    <li><a className='font-Ovo'onClick={closeMenu} href="#contact">Contact Me</a></li>
+                    <li><a className='font-Ovo' onClick={closeMenu} href="#top">Home</a></li>
+                    <li><a className='font-Ovo' onClick={closeMenu} href="#about">About Me</a></li>
+                    <li><a className='font-Ovo' onClick={closeMenu} href="#services">Services</a></li>
+                    <li><a className='font-Ovo' onClick={closeMenu} href="#work">My Work</a></li>
+                    <li><a className='font-Ovo' onClick={closeMenu} href="#contact">Contact Me</a></li>
                 </ul>
 
             </nav>
