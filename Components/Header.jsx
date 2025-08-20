@@ -8,9 +8,9 @@ const Header = () => {
         gap-4
         '>
             <div>
-                <Image src={assets.profile_img} alt=''  className='rounded-full w-40 mt-38 mr-20' />
+                <Image src={assets.profile_img} alt=''  className='rounded-full w-40  mt-40  mr-20' />
             </div>
-            <h3 className='flex items-end gap-5 text-xl md:text-3xl  mb-5  font-Ovo' >
+            <h3 className='flex items-end gap-5 text-xl md:text-3xl  mb-3  font-Ovo' >
                 Hi! I'm Hamid Khan   <Image src={assets.hand_icon} alt='' className=' w-10' /></h3>
 
             <h1 className='text-3x1 sm:text-6xl lg:text-[68px] mb-2 font-ovo'>

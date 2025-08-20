@@ -15,7 +15,7 @@ const Services = () => {
             <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
 
                 I am a frontend developer from Abbottabad, Pakistan with 2 month experence in company DevDiligent.
-
+               </p>
                 <div className='grid grid-cols-4 gap-6 my-10'>
 
                     {serviceData.map(({icon, title, description, link}, index) => (
@@ -36,7 +36,7 @@ const Services = () => {
 
                 </div>
 
-            </p>
+         
         </div>
     )
 }
