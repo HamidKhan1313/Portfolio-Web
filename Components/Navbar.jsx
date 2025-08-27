@@ -2,7 +2,7 @@ import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 
-function Navbar() {
+function Navbar({isDarkMode, setIsDarkMode}) {
 
 
     const [isScroll, setIsScroll] = useState(false)
@@ -29,27 +29,27 @@ function Navbar() {
 
     return (
         <>
-            <div className='fixed top-0  right-0 w-11/12 -z-6 translate-y-[-70%]'>
+            <div className='fixed top-0  right-0 w-11/12 -z-6 translate-y-[-80%] dark:hidden'>
                 <Image src={assets.header_bg_color} alt='' className='w-full' />
             </div>
             <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex  items-center
-             justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur shadow-sm" : ""}`}>
+             justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/2" : ""}`}>
 
                 <a href="#top">
-
+               <Image src={assets.logo} alt='' className=''/>
                 </a>
                 <ul className={`hidden md:flex  items-center gap-6 lg:gap-8 rounded-full
                      px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"} `}>
                     <li><a className='font-Ovo ' href="#top">Home</a></li>
                     <li><a className='font-Ovo' href="#About">About Me</a></li>
                     <li><a className='font-Ovo' href="#services">Services</a></li>
-                    <li><a className='font-Ovo' href="#work">My Work</a></li>
+                     <li><a className='font-Ovo' href="#Work">My Work</a></li>
                     <li><a className='font-Ovo' href="#contact">Contact Me</a></li>
                 </ul>
                 <div className='flex items-center gap-4'>
 
-                    <button>
-                        <Image src={assets.moon_icon} alt='' className='w-6' />
+                    <button onClick={() => isDarkMode(prev => !prev)}>
+                        <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt='' className='w-6' />
                     </button>
 
                     <a href="#contact" className='hidden lg:flex items-center gap-3 PX-10  PY-2.5
