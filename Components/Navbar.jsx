@@ -36,7 +36,7 @@ function Navbar({isDarkMode, setIsDarkMode}) {
              justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/2" : ""}`}>
 
                 <a href="#top">
-               <Image src={assets.logo} alt='' className=''/>
+               <Image src={ isDarkMode ? assets.logo_dark : assets.logo} alt='' className=''/>
                 </a>
                 <ul className={`hidden md:flex  items-center gap-6 lg:gap-8 rounded-full
                      px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"} `}>
