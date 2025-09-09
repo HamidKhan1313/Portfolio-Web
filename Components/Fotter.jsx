@@ -15,7 +15,7 @@ const Fotter = ({isDarkMode}) => {
       </div>
       <div className='text-center sm:flex items-center justify-between border-t-2
       border-gray-400 mx-[10%] mt-12 py-6'>
-      <p>@ 2025 Willian Mark. All rights reserved. </p>
+      <p>@ 2025 Hamid Mark. All rights reserved. </p>
       <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0'>
         <li><a target='_blank' href='https://github.com/HamidKhan1313'>GitHub</a></li>
         <li><a target='_blank' href='https://www.linkedin.com/in/hamid-khan-56018b327/'>LinkdIn</a></li>
