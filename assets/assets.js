@@ -79,17 +79,17 @@ export const assets = {
 export const workData = [
     {
         title: 'Frontend project',
-        description: 'Web Design',
+        description: 'Food Dilevery App',
         bgImage: '/work-1.png',
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
+        title: 'Frontend project',
+        description: 'Gemini Clone',
         bgImage: '/work-2.png',
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
+        title: 'Frontend project',
+        description: 'AI Image Generation ',
         bgImage: '/work-3.png',
     }
 ]
