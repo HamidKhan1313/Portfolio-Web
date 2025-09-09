@@ -5,7 +5,6 @@ import Contact from "@/Components/Contact";
 import Fotter from "@/Components/Fotter";
 import Header from "@/Components/Header";
 import Navbar from "@/Components/Navbar";
-import Services from "@/Components/Services";
 import Work from "@/Components/Work";
 import { useEffect, useState } from "react";
 
@@ -37,7 +36,6 @@ if(isDarkMode){
     <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
     <Header isDarkMode={isDarkMode}/>
     <About isDarkMode={isDarkMode}/>
-    <Services isDarkMode={isDarkMode}/>
     <Work isDarkMode={isDarkMode}/>
     <Contact isDarkMode={isDarkMode}/>
     <Fotter isDarkMode={isDarkMode}/>
