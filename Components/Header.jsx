@@ -36,7 +36,7 @@ const Header = () => {
                 transition={{ duration: 0.6, delay: 0.7 }}
 
                 className='max-w-3xl mx-auto font-Ovo '>
-                I am a frontend developer from Abbottabad, Pakistan with 2 month of Intership experence in a
+                I am a frontend developer from Islamabad, Pakistan with 2 month of Intership experence in a
                 company DevDiligent.
             </motion.p>
             <div className=' w-full max-w-3xl text-center mx-auto h-screen flex flex-col
